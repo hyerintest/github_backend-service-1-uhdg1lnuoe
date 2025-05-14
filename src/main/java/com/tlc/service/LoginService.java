@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class LoginService {
     public ResponseObject doLogin(EmailAuth token) {
+        log.info("login service token : {}", token);
         ResponseObject responseObject = new ResponseObject();
         responseObject.putResult(token);
         return responseObject;
